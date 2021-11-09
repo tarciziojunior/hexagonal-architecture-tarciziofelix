@@ -49,7 +49,6 @@
         /// <summary>
         /// Get user for id
         /// </summary>
-        /// 
         [ProducesResponseType(typeof(UserResponse), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("{id}", Name = "GetUser")]

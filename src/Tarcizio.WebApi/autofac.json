@@ -1,0 +1,24 @@
+﻿{
+  "defaultAssembly": "Tarcizio.Infrastructure",
+  "modules": [
+    {
+      "type": "Tarcizio.Infrastructure.Modules.WebApiModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "Tarcizio.Infrastructure.Modules.ApplicationModule",
+      "properties": {
+      }
+    },
+    {
+      "type": "Tarcizio.Infrastructure.InMemoryDataAccess.Module"
+    },
+    {
+      "type": "Tarcizio.Infrastructure.Integrations.Module",
+      "properties": {
+        "viaCep": "http://viacep.com.br/ws/"
+      }
+    }
+  ]
+}

@@ -51,7 +51,7 @@ namespace Tarcizio.Application.Commands.Enrollment
             return IsNulUser(user);
         }
 
-        public async Task<User> Update(Guid id, User user)
+        public async Task Update(Guid id, User user)
         {
             user.BusinessRules();
             User userOld = await Get(id);
@@ -62,8 +62,7 @@ namespace Tarcizio.Application.Commands.Enrollment
             {
                 userOld.Addresses[i] = await this.addressReadOnlyApi.Get(user.Addresses[i].ZipCode, user.Addresses[i].Category);
             }
-            await this.userWriteOnlyRepository.Update(userOld);
-            return userOld;
+            await this.userWriteOnlyRepository.Update(userOld);           
         }
 
         private User IsNulUser(User user)

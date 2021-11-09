@@ -1,6 +1,7 @@
 ﻿namespace Tarcizio.WebApi.UseCases.User
 {
     using AutoMapper;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using System;
     using System.Collections.Generic;
@@ -25,25 +26,32 @@
         /// Register a new User
         /// </summary>
         [HttpPost]
+        [ProducesResponseType(typeof(UserResponse), StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> Post([FromBody] UserRequest request)
         {
-            User user = await userUseCase.Add(mapper.Map<User>(request));
-            return new ObjectResult(mapper.Map<UserResponse>(user));
+            User user = await userUseCase.Add(mapper.Map<User>(request));            
+            return CreatedAtAction("Post", new { id = user.Id }, user);
         }
 
         /// <summary>
         /// Update User
         /// </summary>
+        [ProducesResponseType(typeof(UserResponse), StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPut("{id}", Name = "PutUser")]
         public async Task<IActionResult> Put(Guid id, [FromBody] UserRequest request)
         {
-            User user = await userUseCase.Update(id, mapper.Map<User>(request));
-            return new ObjectResult(mapper.Map<UserResponse>(user));
+            await userUseCase.Update(id, mapper.Map<User>(request));
+            return NoContent();
         }
 
         /// <summary>
         /// Get user for id
         /// </summary>
+        /// 
+        [ProducesResponseType(typeof(UserResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("{id}", Name = "GetUser")]
         public async Task<IActionResult> Get(Guid id)
         {
@@ -57,6 +65,8 @@
         /// <summary>
         /// Get user addresses
         /// </summary>
+        [ProducesResponseType(typeof(UserResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet("{id}/addresses", Name = "GetAddresses")]
         public async Task<IActionResult> GetAddress(Guid id)
         {
@@ -66,6 +76,8 @@
         /// <summary>
         /// Get user for name
         /// </summary>
+        [ProducesResponseType(typeof(UserResponse), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet(Name = "GetUserForName")]
         public async Task<IActionResult> Get([FromQuery(Name = "name")] String name)
         {
@@ -79,11 +91,13 @@
         /// <summary>
         /// Get user for id
         /// </summary>
+        [ProducesResponseType(typeof(UserResponse), StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpDelete("{id}", Name = "DeleteUser")]
         public async Task<IActionResult> Delete(Guid id)
         {
             await this.userUseCase.Delete(id);
-            return Ok();
+            return NoContent();
         }
     }
 }

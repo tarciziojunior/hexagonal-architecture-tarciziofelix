@@ -10,6 +10,6 @@ namespace Tarcizio.Application.Commands.Enrollment
         Task<User> Get(Guid guid);
         Task<User> Get(string name);
         Task Delete(Guid id);
-        Task<User> Update(Guid id, User user);
+        Task Update(Guid id, User user);
     }
 }

@@ -1,15 +1,15 @@
+using NSubstitute;
+using System;
+using System.Collections.Generic;
+using Tarcizio.Application;
+using Tarcizio.Application.Commands.Enrollment;
+using Tarcizio.Application.Integrations;
+using Tarcizio.Application.Repositories;
+using Tarcizio.Domain.Enrollment;
+using Xunit;
+
 namespace Tarcizio.UseCases.Tests
 {
-    using NSubstitute;
-    using System;
-    using System.Collections.Generic;
-    using Tarcizio.Application;
-    using Tarcizio.Application.Commands.Enrollment;
-    using Tarcizio.Application.Integrations;
-    using Tarcizio.Application.Repositories;
-    using Tarcizio.Domain.Users;
-    using Xunit;
-
     public class UserTests
     {
         public IUserReadOnlyRepository userReadOnlyRepository;

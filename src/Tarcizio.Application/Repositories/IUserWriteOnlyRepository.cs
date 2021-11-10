@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Tarcizio.Domain.Users;
+using Tarcizio.Domain.Enrollment;
 
 namespace Tarcizio.Application.Repositories
 {

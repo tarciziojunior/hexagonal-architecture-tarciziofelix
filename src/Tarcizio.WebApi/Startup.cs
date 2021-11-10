@@ -1,17 +1,17 @@
-﻿namespace Tarcizio.WebApi
-{
-    using Autofac;
-    using Autofac.Configuration;
-    using AutoMapper;
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using System.IO;
-    using Tarcizio.Domain.Users;
-    using Tarcizio.WebApi.Filters;
-    using Tarcizio.WebApi.UseCases.User;
+﻿using Autofac;
+using Autofac.Configuration;
+using AutoMapper;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using Tarcizio.Domain.Enrollment;
+using Tarcizio.WebApi.Filters;
+using Tarcizio.WebApi.UseCases.Enrollment;
 
+namespace Tarcizio.WebApi
+{
     public sealed class Startup
     {
         public Startup(IConfiguration configuration)

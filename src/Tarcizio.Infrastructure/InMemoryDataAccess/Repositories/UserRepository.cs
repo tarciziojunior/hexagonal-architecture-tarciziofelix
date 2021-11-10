@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Tarcizio.Application.Repositories;
-using Tarcizio.Domain.Users;
+using Tarcizio.Domain.Enrollment;
 
 namespace Tarcizio.Infrastructure.InMemoryDataAccess.Repositories
 {

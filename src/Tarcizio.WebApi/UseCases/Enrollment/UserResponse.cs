@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Tarcizio.WebApi.UseCases.User
+namespace Tarcizio.WebApi.UseCases.Enrollment
 {
     public sealed class UserResponse
     {

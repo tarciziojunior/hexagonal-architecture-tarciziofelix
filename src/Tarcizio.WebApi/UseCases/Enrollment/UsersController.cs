@@ -1,14 +1,14 @@
-﻿namespace Tarcizio.WebApi.UseCases.User
-{
-    using AutoMapper;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc;
-    using System;
-    using System.Collections.Generic;
-    using System.Threading.Tasks;
-    using Tarcizio.Application.Commands.Enrollment;
-    using Tarcizio.Domain.Users;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Tarcizio.Application.Commands.Enrollment;
+using Tarcizio.Domain.Enrollment;
 
+namespace Tarcizio.WebApi.UseCases.Enrollment
+{
     [Route("api/[controller]")]
     public sealed class UsersController : Controller
     {

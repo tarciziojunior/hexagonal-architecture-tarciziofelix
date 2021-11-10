@@ -3,7 +3,7 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Tarcizio.Application.Integrations;
-using Tarcizio.Domain.Users;
+using Tarcizio.Domain.Enrollment;
 
 namespace Tarcizio.Infrastructure.Integrations
 {

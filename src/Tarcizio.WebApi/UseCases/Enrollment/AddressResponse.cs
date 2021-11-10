@@ -1,7 +1,8 @@
-﻿namespace Tarcizio.WebApi.UseCases.User
+﻿using System;
+using Tarcizio.Domain.Enrollment;
+
+namespace Tarcizio.WebApi.UseCases.Enrollment
 {
-    using System;
-    using Tarcizio.Domain.Users;
     public sealed class AddressResponse
     {
         public String ZipCode { get; set; }

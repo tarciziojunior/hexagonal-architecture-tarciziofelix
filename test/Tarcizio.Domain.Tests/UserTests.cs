@@ -1,4 +1,4 @@
-using Tarcizio.Domain.Users;
+using Tarcizio.Domain.Enrollment;
 using Xunit;
 
 namespace Tarcizio.Domain.Tests

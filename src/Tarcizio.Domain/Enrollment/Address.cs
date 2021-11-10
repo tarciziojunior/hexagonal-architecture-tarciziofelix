@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Tarcizio.Domain.Users
+namespace Tarcizio.Domain.Enrollment
 {
     public class Address
     {

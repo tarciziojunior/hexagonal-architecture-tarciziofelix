@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace Tarcizio.Domain.Users
+namespace Tarcizio.Domain.Enrollment
 {
     public class User
     {

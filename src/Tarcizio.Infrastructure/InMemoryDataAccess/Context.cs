@@ -1,8 +1,8 @@
-﻿namespace Tarcizio.Infrastructure.InMemoryDataAccess
-{
-    using System.Collections.ObjectModel;
-    using Tarcizio.Domain.Users;
+﻿using System.Collections.ObjectModel;
+using Tarcizio.Domain.Enrollment;
 
+namespace Tarcizio.Infrastructure.InMemoryDataAccess
+{
     public class Context
     {
         public Collection<User> Users { get; set; }

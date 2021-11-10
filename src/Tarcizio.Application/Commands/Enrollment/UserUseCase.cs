@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Tarcizio.Application.Integrations;
 using Tarcizio.Application.Repositories;
-using Tarcizio.Domain.Users;
+using Tarcizio.Domain.Enrollment;
 
 namespace Tarcizio.Application.Commands.Enrollment
 {

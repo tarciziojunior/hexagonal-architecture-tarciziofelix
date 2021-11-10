@@ -1,4 +1,4 @@
-﻿namespace Tarcizio.Domain.Users
+﻿namespace Tarcizio.Domain.Enrollment
 {
     public enum Status
     {

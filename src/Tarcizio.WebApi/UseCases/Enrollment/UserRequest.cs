@@ -1,4 +1,4 @@
-﻿namespace Tarcizio.WebApi.UseCases.User
+﻿namespace Tarcizio.WebApi.UseCases.Enrollment
 {
     using System;
     using System.Collections.Generic;

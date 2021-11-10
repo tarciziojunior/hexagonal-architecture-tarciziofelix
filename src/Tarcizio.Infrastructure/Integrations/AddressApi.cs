@@ -20,14 +20,14 @@ namespace Tarcizio.Infrastructure.Integrations
 
         public async Task<Address> Get(string zipCode, Category category)
         {
-            var request = new HttpRequestMessage(HttpMethod.Get, String.Format(viaCep + "{0}/json/", zipCode));
+            var request = new HttpRequestMessage(HttpMethod.Get, viaCep + $"{zipCode}/json/");
             request.Headers.Add("Accept", "application/json");
 
             var response = await httpClient.SendAsync(request);
 
             if (!response.IsSuccessStatusCode)
             {
-                throw new AddressNotFoundException(String.Format("Address {0} not fountd", zipCode));
+                throw new AddressNotFoundException($"Address {zipCode} not found");
             }
             String responseStream = await response.Content.ReadAsStringAsync();
             Address address = JsonConvert.DeserializeObject<Address>(responseStream);

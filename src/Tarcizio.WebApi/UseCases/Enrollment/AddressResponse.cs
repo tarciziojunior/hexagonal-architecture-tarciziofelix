@@ -6,7 +6,7 @@ namespace Tarcizio.WebApi.UseCases.Enrollment
     public sealed class AddressResponse
     {
         public String ZipCode { get; set; }
-        public Category Category { get; set; }
+        public String Category { get; set; }
         public String Street { get; set; }
         public String Complement { get; set; }
         public String Neighborhood { get; set; }

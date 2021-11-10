@@ -92,6 +92,8 @@ namespace Tarcizio.WebApi
 
                 CreateMap<UserResponse, User>().ReverseMap();
                 CreateMap<AddressResponse, Address>().ReverseMap();
+                CreateMap<Category, string>().ConvertUsing(
+                               x => x.ToString());
             }
         }
 

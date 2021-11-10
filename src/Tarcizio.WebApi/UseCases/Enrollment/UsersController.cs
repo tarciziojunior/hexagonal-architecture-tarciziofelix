@@ -31,7 +31,7 @@ namespace Tarcizio.WebApi.UseCases.Enrollment
         public async Task<IActionResult> Post([FromBody] UserRequest request)
         {
             User user = await userUseCase.Add(mapper.Map<User>(request));            
-            return CreatedAtAction("Post", new { id = user.Id }, user);
+            return CreatedAtAction("Post", new { id = user.Id }, mapper.Map<UserResponse>(user));
         }
 
         /// <summary>
